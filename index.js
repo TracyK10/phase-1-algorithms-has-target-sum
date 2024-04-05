@@ -1,7 +1,7 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
 
-  // pick the first element
+  // iterate through the array and pick the one element
   for(let i = 0; i<array.length ;i++){
     // pick the next element
     for(let j = i + 1; j<array.length;j++) {
