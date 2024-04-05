@@ -1,13 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
 
+  // pick the first element
   for(let i = 0; i<array.length ;i++){
+    // pick the next element
     for(let j = i + 1; j<array.length;j++) {
+      // check if the element picked and the next element add up to the target
       if(array[i] + array[j] === target){
         return true
       } 
       }
     }
+    // if there are no element that add up to the target
     return false
   }
 
@@ -47,6 +51,11 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", hasTargetSum([1, 2, 5], 4));
+
+  console.log("");
+
+  console.log("Expecting: true");
+  console.log("=>", hasTargetSum([4, 2, 3], 7));
 }
 
 module.exports = hasTargetSum;
